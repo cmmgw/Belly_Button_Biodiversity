@@ -32,7 +32,7 @@ function optionChanged(newSample) {
 
 // Demographics Panel 
 function buildMetadata(sample) {
-  d3.json("../static/js/samples.json").then((data) => {
+  d3.json("static/js/samples.json").then((data) => {
     var metadata = data.metadata;
     console.log(metadata)
 
@@ -65,7 +65,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
 
   // 2. Use d3.json to load and retrieve the samples.json file 
-  d3.json("../static/js/samples.json").then((data) => {
+  d3.json("static/js/samples.json").then((data) => {
 
     // 3. Create a variable that holds the samples array. 
     var samples = data.samples;
@@ -106,13 +106,9 @@ function buildCharts(sample) {
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "<b>Top 10 Bacteria Cultures Found</b>",    
-      // x: "Sample Values",
-      // y: "OTU Labels",
+      title: "<b>Top 10 Bacteria Cultures Found</b>"
     };
     console.log(barLayout)
-
-    // plot axis?
 
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -145,9 +141,7 @@ function buildCharts(sample) {
       margin: { t: 0 },
       hovermode: "closest",
       xaxis: { title: "OTU ID" },
-      margin: { t: 30}
-      
-    
+      margin: { t: 30}, 
     };
 
     // 3. Use Plotly to plot the data with the layout.
