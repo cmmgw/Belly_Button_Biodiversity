@@ -20,10 +20,10 @@ function init() {
   });
 }
 
-// Initialize the dashboard
-init();
 
+// this function is the trigger when the drop down is used to select a new value
 function optionChanged(newSample) {
+
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
   buildCharts(newSample);
@@ -191,3 +191,7 @@ var metadata = data.metadata;
 
   });
 }
+
+
+// Initialize the dashboard
+init();
