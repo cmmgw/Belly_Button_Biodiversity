@@ -106,7 +106,7 @@ function buildCharts(sample) {
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",    
+      title: "<b>Top 10 Bacteria Cultures Found</b>",    
       // x: "Sample Values",
       // y: "OTU Labels",
     };
@@ -141,7 +141,7 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: "<b>Bacteria Cultures Per Sample</b>",
       margin: { t: 0 },
       hovermode: "closest",
       xaxis: { title: "OTU ID" },
@@ -164,12 +164,11 @@ var metadata = data.metadata;
 
     // 3. Create a variable that holds the washing frequency.
     var washFrequency = gaugeResult.wfreq;
-
     
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
     {
-      title: { text: "<b>Belly Button Washing Frequency</b> <br> Scrubs Per Week" },
+      title: { text: "<b>Belly Button Washing Frequency</b> <br>Scrubs Per Week" },
       value: parseFloat(washFrequency),
       type: "indicator",
       mode: "gauge+number",
@@ -198,8 +197,3 @@ var metadata = data.metadata;
 
   });
 }
-
-
-
-
-
