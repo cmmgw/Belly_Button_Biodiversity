@@ -105,10 +105,21 @@ function buildCharts(sample) {
     }];
 
     // 9. Create the layout for the bar chart. 
+    //var barLayout = {
+    //  title: "<b>Top 10 Bacteria Cultures Found</b>"
+    //};
+    //console.log(barLayout)
+
+
     var barLayout = {
-      title: "<b>Top 10 Bacteria Cultures Found</b>"
-    };
-    console.log(barLayout)
+      title: {
+      text: "<b>Top 10 Bacteria Cultures Found</b>",
+      font: {
+        size: 20
+      },
+    }};
+
+
 
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -136,13 +147,25 @@ function buildCharts(sample) {
     ];
 
     // 2. Create the layout for the bubble chart.
+    // var bubbleLayout = {
+    //   title: "<b>Bacteria Cultures Per Sample</b>",
+    //   margin: { t: 0 },
+    //   hovermode: "closest",
+    //   xaxis: { title: "OTU ID" },
+    //   margin: { t: 30}, 
+    // };
+
+
     var bubbleLayout = {
       title: "<b>Bacteria Cultures Per Sample</b>",
       margin: { t: 0 },
       hovermode: "closest",
       xaxis: { title: "OTU ID" },
       margin: { t: 30}, 
-    };
+      font: {
+      size: 14
+    },
+  };
 
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
